@@ -26,7 +26,9 @@ app.engine('hbs', expressHandlebars({
 }))
 
 app.get('/', function (req, res) {
-    res.send('Hello world')
+        res.render("toy/addOrEdit", {
+        viewTitle: "Insert Toy",
+    })
 })
 app.set('view engine', 'hbs');
 
